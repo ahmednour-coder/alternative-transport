@@ -127,11 +127,13 @@ Les 24 captures sont dans [`docs/screenshots/`](docs/screenshots) et la planche 
 
 ## 🎬 Vidéo de démonstration
 
-> Démonstration complète de l'application : inscription, vérification des documents,
-> recherche et réservation d'un véhicule, accès par code / Bluetooth, trajet et récapitulatif.
+[![Vidéo de démonstration de l'application](docs/screenshots/01-welcome.jpg)](docs/video/demo.mp4)
 
-**▶️ Vidéo :** _lien à ajouter_ — dépose la vidéo ici : `docs/video/demo.mp4`
-(ou indique un lien YouTube / Drive pour l'intégrer directement dans ce README).
+**▶️ [Regarder la vidéo de démonstration](docs/video/demo.mp4)** — MP4, 2 min 10, 36 Mo
+
+> Parcours complet filmé : inscription, vérification des documents, recherche et réservation
+> d'un véhicule, accès par code / Bluetooth, trajet et récapitulatif.
+
 
 
 ## 🧪 Qualité

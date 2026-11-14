@@ -1,10 +1,8 @@
-Dépose ici la vidéo de démonstration de l'application.
+Vidéo de démonstration de l'application.
 
-Nom conseillé : demo.mp4
+- Fichier : demo.mp4
+- Durée   : 2 min 10
+- Taille  : 36 Mo
+- Source  : 989d303b-97d6-43ba-914f-b3db8ea83717.mp4
 
-Remarques :
-- GitHub refuse les fichiers de plus de 100 Mo ; au-delà, préférer un lien
-  YouTube / Google Drive / WeTransfer dans le README.
-- Pour un fichier volumineux mais < 100 Mo, Git LFS est recommandé :
-    git lfs install
-    git lfs track "docs/video/*.mp4"
+Format MP4 (H.264) — lisible directement dans le navigateur ou un lecteur vidéo.
