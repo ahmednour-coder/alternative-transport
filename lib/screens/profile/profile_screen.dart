@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 
+import '../../core/constants/app_constants.dart';
 import '../../core/router/app_router.dart';
 import '../../core/theme/app_colors.dart';
 import '../../core/utils/formatters.dart';
@@ -51,8 +52,8 @@ class ProfileScreen extends ConsumerWidget {
   @override
   Widget build(BuildContext context, WidgetRef ref) {
     final user = ref.watch(authProvider).user;
-    final name = user?.fullName ?? 'Utilisateur Alternative Transport';
-    final email = user?.email ?? 'contact@alternative.tn';
+    final name = user?.fullName ?? AppConstants.guestName;
+    final email = user?.email ?? AppConstants.guestEmail;
     final initials = user == null
         ? 'AT'
         : initialsOf(user.firstName, user.lastName);

@@ -23,6 +23,13 @@ abstract final class AppConstants {
   static const accessCodeValidity = Duration(minutes: 15);
   static const otpResendDelay = Duration(seconds: 45);
 
+  /// Identité affichée lorsque aucun utilisateur n'est connecté (mode démo).
+  static const guestName = 'Utilisateur Alternative Transport';
+  static const guestFirstName = 'Utilisateur';
+  static const guestLastName = 'Alternative Transport';
+  static const guestEmail = 'contact@alternative.tn';
+  static const guestPhone = '+216 00 000 000';
+
   static const images = 'assets/images';
   static const heroWelcome = '$images/hero_welcome.png';
   static const carBika = '$images/car_bika.png';

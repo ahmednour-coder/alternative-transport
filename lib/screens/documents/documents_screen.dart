@@ -327,7 +327,7 @@ class _DocumentsScreenState extends ConsumerState<DocumentsScreen> {
                           OutlinedButton.icon(
                             onPressed: () => _showDetails(documents),
                             icon: const Icon(Icons.upload_file_rounded, size: 17),
-                            label: const Text('Voir les détails'),
+                            label: const Text('Mettre à jour'),
                           ),
                         ],
                       ),

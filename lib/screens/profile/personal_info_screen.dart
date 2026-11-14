@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 
+import '../../core/constants/app_constants.dart';
 import '../../core/theme/app_colors.dart';
 import '../../core/utils/validators.dart';
 import '../../providers/auth_provider.dart';
@@ -27,10 +28,14 @@ class _PersonalInfoScreenState extends ConsumerState<PersonalInfoScreen> {
   void initState() {
     super.initState();
     final user = ref.read(authProvider).user;
-    _firstName = TextEditingController(text: user?.firstName ?? '');
-    _lastName = TextEditingController(text: user?.lastName ?? '');
-    _email = TextEditingController(text: user?.email ?? '');
-    _phone = TextEditingController(text: user?.phone ?? '+216 ');
+    _firstName = TextEditingController(
+      text: user?.firstName ?? AppConstants.guestFirstName,
+    );
+    _lastName = TextEditingController(
+      text: user?.lastName ?? AppConstants.guestLastName,
+    );
+    _email = TextEditingController(text: user?.email ?? AppConstants.guestEmail);
+    _phone = TextEditingController(text: user?.phone ?? AppConstants.guestPhone);
   }
 
   @override
