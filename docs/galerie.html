@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Alternative Transport — Captures d'écran</title>
+<style>
+  :root {
+    --bleu: #0875C9;
+    --navy: #102F53;
+    --navy-deep: #0B1F36;
+    --fond: #071A2C;
+    --carte: #0F2B45;
+    --texte: #E8F1F9;
+    --mut: #8FA8BF;
+  }
+  * { box-sizing: border-box; }
+  body {
+    margin: 0;
+    padding: 40px 24px 64px;
+    background: radial-gradient(circle at 20% 0%, #123A5C 0%, var(--fond) 55%);
+    color: var(--texte);
+    font-family: "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  }
+  header { text-align: center; margin-bottom: 44px; }
+  .logo {
+    display: inline-flex; align-items: center; gap: 10px;
+    font-weight: 800; letter-spacing: -0.5px; font-size: 26px;
+  }
+  .logo span:first-child { color: #E8F1F9; }
+  .logo span:last-child { color: #7FB6E3; }
+  h1 { font-size: 34px; margin: 18px 0 8px; letter-spacing: -0.8px; }
+  .sous { color: var(--mut); font-size: 15px; max-width: 620px; margin: 0 auto; line-height: 1.6; }
+  .compteur {
+    display: inline-block; margin-top: 18px; padding: 7px 16px; border-radius: 999px;
+    background: rgba(8,117,201,.16); color: #9BCBF0; font-size: 13px; font-weight: 600;
+  }
+  .grille {
+    display: grid; gap: 26px 20px;
+    grid-template-columns: repeat(auto-fill, minmax(196px, 1fr));
+    max-width: 1180px; margin: 0 auto;
+  }
+  figure { margin: 0; }
+  .cadre {
+    border-radius: 18px; overflow: hidden; background: var(--carte);
+    box-shadow: 0 14px 30px rgba(0,0,0,.45), 0 0 0 1px rgba(255,255,255,.06);
+    transition: transform .18s ease, box-shadow .18s ease;
+  }
+  .cadre:hover { transform: translateY(-5px); box-shadow: 0 20px 38px rgba(0,0,0,.55), 0 0 0 1px rgba(8,117,201,.5); }
+  .cadre img { display: block; width: 100%; height: auto; }
+  figcaption { margin-top: 11px; }
+  .num {
+    display: inline-block; min-width: 22px; padding: 1px 7px; margin-right: 7px;
+    border-radius: 6px; background: rgba(8,117,201,.9); color: #fff;
+    font-size: 11px; font-weight: 700; vertical-align: 2px;
+  }
+  .titre { font-size: 13.5px; font-weight: 700; }
+  .route { display: block; margin-top: 3px; color: var(--mut); font-size: 11.5px; font-family: Consolas, monospace; }
+  footer { text-align: center; color: var(--mut); font-size: 12.5px; margin-top: 52px; line-height: 1.8; }
+  a { color: #6FB4E8; text-decoration: none; }
+  a:hover { text-decoration: underline; }
+</style>
+</head>
+<body>
+
+<header>
+  <div class="logo"><span>AT</span><span>Alternative Transport</span></div>
+  <h1>Captures d'écran de l'application</h1>
+  <p class="sous">
+    Parcours complet : inscription et vérification des documents, recherche et réservation
+    d'un véhicule électrique, accès par code et Bluetooth, trajet, puis espace personnel.
+  </p>
+  <div class="compteur">24 écrans · Flutter · français</div>
+</header>
+
+<main class="grille">
+
+  <figure><div class="cadre"><img src="screenshots/01-welcome.jpg" alt="Bienvenue" loading="lazy"></div>
+    <figcaption><span class="num">01</span><span class="titre">Bienvenue</span><span class="route">/welcome</span></figcaption></figure>
+
+  <figure><div class="cadre"><img src="screenshots/02-brand.jpg" alt="Notre marque" loading="lazy"></div>
+    <figcaption><span class="num">02</span><span class="titre">Notre marque</span><span class="route">/brand</span></figcaption></figure>
+
+  <figure><div class="cadre"><img src="screenshots/03-login.jpg" alt="Connexion" loading="lazy"></div>
+    <figcaption><span class="num">03</span><span class="titre">Connexion</span><span class="route">/login</span></figcaption></figure>
+
+  <figure><div class="cadre"><img src="screenshots/04-register.jpg" alt="Inscription" loading="lazy"></div>
+    <figcaption><span class="num">04</span><span class="titre">Inscription</span><span class="route">/register</span></figcaption></figure>
+
+  <figure><div class="cadre"><img src="screenshots/05-otp.jpg" alt="Vérification e-mail" loading="lazy"></div>
+    <figcaption><span class="num">05</span><span class="titre">Vérification e-mail</span><span class="route">/otp</span></figcaption></figure>
+
+  <figure><div class="cadre"><img src="screenshots/06-cin-recto.jpg" alt="Scan CIN recto" loading="lazy"></div>
+    <figcaption><span class="num">06</span><span class="titre">Scan CIN (recto)</span><span class="route">/capture</span></figcaption></figure>
+
+  <figure><div class="cadre"><img src="screenshots/07-verification.jpg" alt="Vérification des documents" loading="lazy"></div>
+    <figcaption><span class="num">07</span><span class="titre">Vérification des documents</span><span class="route">/verification</span></figcaption></figure>
+
+  <figure><div class="cadre"><img src="screenshots/08-home.jpg" alt="Accueil" loading="lazy"></div>
+    <figcaption><span class="num">08</span><span class="titre">Accueil</span><span class="route">/home</span></figcaption></figure>
+
+  <figure><div class="cadre"><img src="screenshots/09-filtres.jpg" alt="Filtres" loading="lazy"></div>
+    <figcaption><span class="num">09</span><span class="titre">Filtres</span><span class="route">/filters</span></figcaption></figure>
+
+  <figure><div class="cadre"><img src="screenshots/10-carte.jpg" alt="Carte" loading="lazy"></div>
+    <figcaption><span class="num">10</span><span class="titre">Carte</span><span class="route">/map</span></figcaption></figure>
+
+  <figure><div class="cadre"><img src="screenshots/11-vehicule.jpg" alt="Détail véhicule" loading="lazy"></div>
+    <figcaption><span class="num">11</span><span class="titre">Détail véhicule</span><span class="route">/vehicle</span></figcaption></figure>
+
+  <figure><div class="cadre"><img src="screenshots/12-reservation.jpg" alt="Réservation" loading="lazy"></div>
+    <figcaption><span class="num">12</span><span class="titre">Réservation</span><span class="route">/reservation</span></figcaption></figure>
+
+  <figure><div class="cadre"><img src="screenshots/13-code-acces.jpg" alt="Code d'accès" loading="lazy"></div>
+    <figcaption><span class="num">13</span><span class="titre">Code d'accès</span><span class="route">/access-code</span></figcaption></figure>
+
+  <figure><div class="cadre"><img src="screenshots/14-bluetooth.jpg" alt="Connexion Bluetooth" loading="lazy"></div>
+    <figcaption><span class="num">14</span><span class="titre">Connexion Bluetooth</span><span class="route">/bluetooth</span></figcaption></figure>
+
+  <figure><div class="cadre"><img src="screenshots/15-controle.jpg" alt="Contrôle du véhicule" loading="lazy"></div>
+    <figcaption><span class="num">15</span><span class="titre">Contrôle du véhicule</span><span class="route">/vehicle/control</span></figcaption></figure>
+
+  <figure><div class="cadre"><img src="screenshots/16-trajet.jpg" alt="Trajet en cours" loading="lazy"></div>
+    <figcaption><span class="num">16</span><span class="titre">Trajet en cours</span><span class="route">/trip</span></figcaption></figure>
+
+  <figure><div class="cadre"><img src="screenshots/17-recapitulatif.jpg" alt="Récapitulatif du trajet" loading="lazy"></div>
+    <figcaption><span class="num">17</span><span class="titre">Récapitulatif du trajet</span><span class="route">/trip/summary</span></figcaption></figure>
+
+  <figure><div class="cadre"><img src="screenshots/18-reservations.jpg" alt="Mes réservations" loading="lazy"></div>
+    <figcaption><span class="num">18</span><span class="titre">Mes réservations</span><span class="route">/reservations</span></figcaption></figure>
+
+  <figure><div class="cadre"><img src="screenshots/19-profil.jpg" alt="Profil" loading="lazy"></div>
+    <figcaption><span class="num">19</span><span class="titre">Profil</span><span class="route">/profile</span></figcaption></figure>
+
+  <figure><div class="cadre"><img src="screenshots/20-infos-perso.jpg" alt="Informations personnelles" loading="lazy"></div>
+    <figcaption><span class="num">20</span><span class="titre">Informations personnelles</span><span class="route">/profile/informations</span></figcaption></figure>
+
+  <figure><div class="cadre"><img src="screenshots/21-documents.jpg" alt="Mes documents" loading="lazy"></div>
+    <figcaption><span class="num">21</span><span class="titre">Mes documents</span><span class="route">/documents</span></figcaption></figure>
+
+  <figure><div class="cadre"><img src="screenshots/22-paiement.jpg" alt="Moyens de paiement" loading="lazy"></div>
+    <figcaption><span class="num">22</span><span class="titre">Moyens de paiement</span><span class="route">/profile/paiements</span></figcaption></figure>
+
+  <figure><div class="cadre"><img src="screenshots/23-preferences.jpg" alt="Préférences" loading="lazy"></div>
+    <figcaption><span class="num">23</span><span class="titre">Préférences</span><span class="route">/profile/preferences</span></figcaption></figure>
+
+  <figure><div class="cadre"><img src="screenshots/24-support.jpg" alt="Aide et support" loading="lazy"></div>
+    <figcaption><span class="num">24</span><span class="titre">Aide &amp; support</span><span class="route">/profile/support</span></figcaption></figure>
+
+</main>
+
+<footer>
+  Alternative Transport · application Flutter de location de véhicules électriques<br>
+  Application en ligne : <a href="http://localhost:8080">http://localhost:8080</a> — compte de démonstration
+  <strong>demo@alternative.tn</strong> / <strong>demo1234</strong>
+</footer>
+
+</body>
+</html>

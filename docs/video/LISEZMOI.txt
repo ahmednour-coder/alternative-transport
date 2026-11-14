@@ -1,0 +1,10 @@
+Dépose ici la vidéo de démonstration de l'application.
+
+Nom conseillé : demo.mp4
+
+Remarques :
+- GitHub refuse les fichiers de plus de 100 Mo ; au-delà, préférer un lien
+  YouTube / Google Drive / WeTransfer dans le README.
+- Pour un fichier volumineux mais < 100 Mo, Git LFS est recommandé :
+    git lfs install
+    git lfs track "docs/video/*.mp4"
