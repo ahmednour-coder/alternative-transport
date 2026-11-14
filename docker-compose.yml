@@ -1,0 +1,51 @@
+name: alternative-transport
+
+services:
+  # ---------------------------------------------------------------
+  # API Node/Express + SQLite (port 3000)
+  # ---------------------------------------------------------------
+  api:
+    build:
+      context: ./backend
+    image: alternative-transport-api:latest
+    container_name: alt-api
+    environment:
+      PORT: "3000"
+      DATABASE_PATH: /data/alternative_transport.db
+    ports:
+      - "3000:3000"
+    volumes:
+      - api-data:/data
+    restart: unless-stopped
+    healthcheck:
+      test:
+        [
+          "CMD",
+          "node",
+          "-e",
+          "fetch('http://127.0.0.1:3000/api/health').then(r=>process.exit(r.ok?0:1)).catch(()=>process.exit(1))",
+        ]
+      interval: 10s
+      timeout: 5s
+      retries: 5
+      start_period: 10s
+
+  # ---------------------------------------------------------------
+  # Application Flutter Web servie par Nginx (port 8080)
+  # Le build doit exister : flutter build web --dart-define=API_BASE_URL=/api
+  # ---------------------------------------------------------------
+  web:
+    image: nginx:alpine
+    container_name: alt-web
+    ports:
+      - "8080:80"
+    volumes:
+      - ./build/web:/usr/share/nginx/html:ro
+      - ./docker/nginx.conf:/etc/nginx/conf.d/default.conf:ro
+    depends_on:
+      api:
+        condition: service_healthy
+    restart: unless-stopped
+
+volumes:
+  api-data:
